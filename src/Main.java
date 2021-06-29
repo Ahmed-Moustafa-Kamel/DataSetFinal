@@ -22,6 +22,14 @@ public class Main {
         System.out.println(" ");
         System.out.println("highest city in each country");
         System.out.println(highestforeach);
+        String File_Name="C:\\Users\\lenovo\\OneDrive\\Desktop\\ITI\\9. Java & UML programming\\Day4\\Data_sets\\Cities.csv";
+        SortedCities sc= new SortedCities();
+        LinkedList<City> Cities_filtered=sc.Filter(File_Name, "EGY");
+        System.out.println(Cities_filtered);
+        HashMap<String, LinkedList<City>> CitiesMap= sc.createdMap(Cities_filtered);
+        System.out.println(CitiesMap);
+        LinkedList<City> sortedCity=sc.sortedCity(CitiesMap);
+        System.out.println(sortedCity);
         
     }
 }   //for (City ct : cities) {
